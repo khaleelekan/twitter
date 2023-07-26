@@ -1,4 +1,4 @@
-
+import SidebarLogo from './SidebarLogo';
 import   { BsMouseFill, BsBellFill } from 'react-icons/bs'
 import {FaUser} from 'react-icons/fa'
 
@@ -20,7 +20,13 @@ const Sidebar=()=> {
     }
 ];
   return (
-    <div></div>
+    <div className='col-span-1 h-full pr-4 md:pr-6'>
+      <div className='flex flex-col items-end'>
+        <div>
+          <SidebarLogo />
+        </div>
+      </div>
+    </div>
   )
 }
 
