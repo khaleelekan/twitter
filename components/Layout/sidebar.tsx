@@ -1,12 +1,13 @@
 import SidebarLogo from './SidebarLogo';
-import   { BsMouseFill, BsBellFill } from 'react-icons/bs'
+import   { BsHouseFill, BsBellFill } from 'react-icons/bs'
 import {FaUser} from 'react-icons/fa'
+import SidebarItem from './SidebarItem';
 
 const Sidebar=()=> {
     const items = [{
         label: 'Home',
         href: '/',
-        icon: BsMouseFill
+        icon: BsHouseFill
     },
     {
         label: 'Notifications',
@@ -24,6 +25,14 @@ const Sidebar=()=> {
       <div className='flex flex-col items-end'>
         <div>
           <SidebarLogo />
+          {items.map((item)=>(
+            <SidebarItem 
+            key={item.href}
+            href={item.href}
+            label={item.label}
+            icon={item.icon}
+            />
+          ))}
         </div>
       </div>
     </div>
